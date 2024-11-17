@@ -1,0 +1,533 @@
+#+hugo_base_dir: ../
+#+hugo_weight: auto
+#+author: tracehugo
+* PROGRAMMIER-Notizen
+:PROPERTIES:
+:EXPORT_HUGO_SECTION: ./development/
+:EXPORT_FILE_NAME: all-posts-private
+:draft: false
+:EXPORT_HUGO_WEIGHT: -999
+:EXPORT_OPTIONS: toc:5.
+:END:
+** Cookies :qt:@Programmieren:qt:dev:rX:programmieren:
+:PROPERTIES:
+:Export_DATE: [2023-04-13T22:03+02:00]
+:CLOSED: [2023-04-13T22:03+02:00]
+:EXPORT_FILE_NAME: 13cookies
+:EXPORT_HUGO_WEIGHT: -13
+:draft:    false
+:END:
+*** dev PySide6 Cookies
+**** A, bing
++ from PySide6.QtCore import QUrl
+from PySide6.QtNetwork import QNetworkCookieJar, QNetworkCookie
+
+# Erstellen Sie eine Instanz der Klasse QNetworkCookieJar
+cookie_jar = QNetworkCookieJar()
+
+# Erstellen Sie ein Cookie-Objekt
+cookie = QNetworkCookie("name", "value")
+
+# Legen Sie das Cookie ab
+cookie_jar.setCookiesFromUrl([cookie], QUrl("https://www.example.com"))
+
+# Laden Sie das Cookie
+cookies = cookie_jar.cookiesForUrl(QUrl("https://www.example.com"))
+**** B, bing
+Um Cookies für jede neu geladene Webseite zu speichern, können Sie die QNetworkCookieJar-Klasse verwenden und sie in der QWebEngineProfile-Klasse einbetten. Hier ist ein Beispielcode, der zeigt, wie Sie Cookies speichern und laden können:
+
+from PySide6.QtCore import QUrl
+from PySide6.QtNetwork import QNetworkCookieJar, QNetworkCookie
+from PySide6.QtWebEngineWidgets import QWebEngineProfile
+
+# Erstellen Sie eine Instanz der Klasse QNetworkCookieJar
+cookie_jar = QNetworkCookieJar()
+
+# Erstellen Sie ein Cookie-Objekt
+cookie = QNetworkCookie("name", "value")
+
+# Legen Sie das Cookie ab
+cookie_jar.setCookiesFromUrl([cookie], QUrl("https://www.example.com"))
+
+# Laden Sie das Cookie
+cookies = cookie_jar.cookiesForUrl(QUrl("https://www.example.com"))
+
+# Erstellen Sie eine Instanz der Klasse QWebEngineProfile
+profile = QWebEngineProfile.defaultProfile()
+
+# Betten Sie die Instanz der Klasse QNetworkCookieJar in die Instanz der Klasse QWebEngineProfile ein
+profile.setPersistentCookiesPolicy(QWebEngineProfile.ForcePersistentCookies)
+profile.setPersistentCookiesThirdPartyPolicy(QWebEngineProfile.ForcePersistentCookies)
+
+profile.setCookieStore(cookie_jar)
+Dieser Code speichert Cookies für jede neu geladene Webseite und lädt sie bei Programmstart. Ich hoffe, das hilft Ihnen weiter. Lassen Sie mich wissen, wenn Sie weitere Fragen haben.
+**** C, bing
+Um Cookies für jede neu geladene Webseite zu speichern und zu laden, können Sie die QNetworkCookieJar-Klasse verwenden und sie in der QWebEngineProfile-Klasse einbetten. Hier ist ein Beispielcode, der zeigt, wie Sie Cookies speichern und laden können:
+
+from PySide6.QtCore import QUrl
+from PySide6.QtNetwork import QNetworkCookieJar, QNetworkCookie
+from PySide6.QtWebEngineWidgets import QWebEngineProfile
+
+class CookieJar(QNetworkCookieJar):
+    def __init__(self):
+        super().__init__()
+
+    def cookiesForUrl(self, url):
+        return super().cookiesForUrl(url)
+
+    def setCookiesFromUrl(self, cookieList, url):
+        super().setCookiesFromUrl(cookieList, url)
+
+# Erstellen Sie eine Instanz der Klasse QNetworkCookieJar
+cookie_jar = CookieJar()
+
+# Erstellen Sie ein Cookie-Objekt
+cookie = QNetworkCookie("name", "value")
+
+# Legen Sie das Cookie ab
+cookie_jar.setCookiesFromUrl([cookie], QUrl("https://www.example.com"))
+
+# Laden Sie das Cookie
+cookies = cookie_jar.cookiesForUrl(QUrl("https://www.example.com"))
+
+# Erstellen Sie eine Instanz der Klasse QWebEngineProfile
+profile = QWebEngineProfile.defaultProfile()
+
+# Betten Sie die Instanz der Klasse QNetworkCookieJar in die Instanz der Klasse QWebEngineProfile ein
+profile.setPersistentCookiesPolicy(QWebEngineProfile.ForcePersistentCookies)
+profile.setPersistentCookiesThirdPartyPolicy(QWebEngineProfile.ForcePersistentCookies)
+
+profile.setCookieStore(cookie_jar)
+In diesem Beispielcode wird eine Unterklasse von QNetworkCookieJar namens CookieJar erstellt. Diese Klasse enthält Methoden zum Speichern und Laden von Cookies. Die Methoden cookiesForUrl und setCookiesFromUrl werden verwendet, um Cookies zu speichern und zu laden. Der Rest des Codes ist ähnlich wie im vorherigen Beispiel. Ich hoffe, das hilft Ihnen weiter. Lassen Sie mich wissen, wenn Sie weitere Fragen haben.
+**** D, older than bing
+
+# Eine Website laden
+web_view.load(QUrl('http://example.com'))
+**** E, older than bing
+Wenn Sie möchten, dass Änderungen an einem Cookie sofort im Cookie-Jar gespeichert werden, können Sie dies in der QNetworkCookieJar-Klasse durch das Signal cookiesChanged erreichen. Dieses Signal wird ausgelöst, wenn der Inhalt des Cookie-Jars geändert wird, z.B. wenn ein Cookie hinzugefügt, geändert oder entfernt wird. Sie können das Signal abfangen und eine Funktion ausführen, die den Inhalt des Cookie-Jars speichert. Hier ist ein Beispiel:
+
+python
+
+from PySide6.QtCore import QUrl
+from PySide6.QtNetwork import QNetworkCookie, QNetworkCookieJar
+from PySide6.QtWebEngineWidgets import QWebEngineView
+
+class CookieJar(QNetworkCookieJar):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.cookies = []
+
+    def cookiesForUrl(self, url):
+        return self.cookies
+
+    def setCookiesFromUrl(self, cookie_list, url):
+        self.cookies = cookie_list
+        self.emitCookiesChanged()
+
+    def emitCookiesChanged(self):
+        self.cookiesChanged.emit()
+
+# CookieJar-Objekt erstellen
+cookie_jar = CookieJar()
+
+# QWebEngineView-Objekt erstellen und dem CookieJar zuweisen
+web_view = QWebEngineView()
+web_view.page().setCookieJar(cookie_jar)
+
+# Cookie erstellen und dem CookieJar hinzufügen
+cookie = QNetworkCookie('cookie_name', 'cookie_value')
+cookie.setDomain('example.com')
+cookie.setPath('/')
+cookie_jar.setCookiesFromUrl([cookie], QUrl('http://example.com'))
+
+# Cookie ändern und im CookieJar aktualisieren
+cookie.setValue('new_value')
+cookie_jar.setCookiesFromUrl([cookie], QUrl('http://example.com'))
+
+# Die Cookies im CookieJar speichern, wenn sich der Inhalt ändert
+cookie_jar.cookiesChanged.connect(lambda: save_cookies_to_disk(cookie_jar.cookies))
+
+In diesem Beispiel wird eine CookieJar-Klasse erstellt, die von der QNetworkCookieJar-Klasse abgeleitet ist. Die CookieJar-Klasse speichert alle Cookies in einer Liste und überschreibt die cookiesForUrl- und setCookiesFromUrl-Methoden, um die Cookie-Liste zu verwalten. Wenn Änderungen am Cookie-Jar vorgenommen werden, wird das cookiesChanged-Signal ausgelöst, das eine Funktion save_cookies_to_disk ausführt, um den Inhalt des Cookie-Jars zu speichern.
+
+Dies ist nur ein Beispiel und die Implementierung kann je nach Anforderungen und Situationen variieren.
+**** F
+Um eine Base64-Kodierung mit Node.js zu erstellen, kannst du das Buffer-Objekt verwenden:
+
+javascript
+
+const compressedData = // komprimierte Daten als Uint8Array
+const base64Data = Buffer.from(compressedData).toString('base64');
+
+Und um die Base64-Daten in Node.js wieder in ein Uint8Array zu konvertieren, kannst du Folgendes verwenden:
+
+javascript
+
+const base64Data = // Base64-kodierte Daten als String
+const binaryData = Buffer.from(base64Data, 'base64');
+const compressedData = new Uint8Array(binaryData);
+
+In einem Browser kannst du die btoa- und atob-Funktionen verwenden, um Binärdaten zu Base64 zu kodieren und zu dekodieren:
+
+javascript
+
+const compressedData = // komprimierte Daten als Uint8Array
+const base64Data = btoa(String.fromCharCode.apply(null, compressedData));
+
+Und um die Base64-kodierten Daten in einem Browser in ein Uint8Array zu konvertieren, kannst du das Folgende verwenden:
+
+javascript
+
+const base64Data = // Base64-kodierte Daten als String
+const binaryData = atob(base64Data);
+const compressedData = new Uint8Array(binaryData.length);
+for (let i = 0; i < binaryData.length; i++) {
+  compressedData[i] = binaryData.charCodeAt(i);
+}
+**** G
+welche ist die beste xz lib für js in browsern
+
+    lzma.js: Eine XZ-Implementierung von Lasse Reinhold. Es ist eine sehr einfache Bibliothek, die einen Algorithmus für die Komprimierung und Dekomprimierung von XZ-Dateien bereitstellt. Die Größe der Bibliothek beträgt etwa 90 kB.
+
+    pako: Eine sehr schnelle JavaScript-Bibliothek zur Komprimierung und Dekomprimierung von Daten, die mehrere Kompressionsmethoden wie Deflate und gzip unterstützt. Es unterstützt auch XZ-Kompression. Die Größe der Bibliothek beträgt etwa 68 kB.
+
+    lz-string: Eine Bibliothek, die eine leichte und schnelle Komprimierung von Zeichenketten in JavaScript ermöglicht. Es unterstützt auch XZ-Kompression. Die Größe der Bibliothek beträgt etwa 14 kB.
+
+    lz-utf8: Eine schnelle und einfache JavaScript-Bibliothek, die eine leichte Komprimierung von UTF-8-Zeichenketten bietet. Es unterstützt auch XZ-Kompression. Die Größe der Bibliothek beträgt etwa 4 kB.
+**** H
+Gerne, hier ist ein Beispiel mit der LZ-String Bibliothek:
+
+javascript
+
+// Importieren der LZ-String Bibliothek
+const LZString = require('lz-string');
+
+// Beispiel-Daten in mehrere Chunks aufteilen
+const data = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada, dolor at feugiat tincidunt, mi lacus congue ipsum, vel bibendum magna enim a quam.';
+
+const chunk1 = data.substring(0, 30);
+const chunk2 = data.substring(30, 60);
+const chunk3 = data.substring(60);
+
+// Komprimierung der Chunks und Speicherung in einer zentralen Datenhalde
+const compressedData = LZString.compressToBase64(chunk1) + LZString.compressToBase64(chunk2) + LZString.compressToBase64(chunk3);
+
+// Dekomprimierung eines Teils der Daten
+const decompressedChunk = LZString.decompressFromBase64(compressedData.substring(0, 100));
+
+console.log(decompressedChunk);
+
+In diesem Beispiel wird ein String in drei Chunks aufgeteilt und mit LZ-String komprimiert. Die komprimierten Chunks werden in einer zentralen Datenhalde gespeichert. Danach wird nur ein Teil der Daten dekomprimiert, indem der erste Teil der komprimierten Daten gelesen und dekomprimiert wird. Durch die Verwendung der zentralen Datenhalde wird Speicherplatz gespart, da nicht für jeden Chunk eine separate komprimierte Version gespeichert werden muss.
+** neovim vim :neovim:vim:@Programmieren:
+:PROPERTIES:
+:Export_DATE: [2023-04-21T15:03+02:00]
+:CLOSED: [2023-04-21T15:03+02:00]
+:EXPORT_FILE_NAME: 14vim
+:EXPORT_HUGO_WEIGHT: -14
+:draft:    false
+:END:
+*** marks
++ ma merke a
++ 'a gehe zu a
++ kombinierbar mit löschbefehlen bis zur Zeit zB
++ oder mit copy paste befehlen
++ :marks listen v allen
++ auch zu spalte mit zeile springbar und merkbar
+** religionen.ts :ts:@Programmieren:
+:PROPERTIES:
+:Export_DATE: [2023-07-17T06:25+02:00]
+:CLOSED: [2023-07-17T06:25+02:00]
+:EXPORT_FILE_NAME: 15ts
+:EXPORT_HUGO_WEIGHT: -15
+:draft:    false
+:END:
+*** Dokumentation des lesen des Quelltextes von religionen.ts
++ subFkt1_PolyTpes
++ giveSetOfPolyTypes
++ SubFkt3SubFkt2bPtr: für Polygone
++ SubFkt3SubFkt2b
++ SubFkt3SubFkt1Ptr
++ SubFkt3SubFkt2Ptr
++ ab 170 bis 220, und bei 700 und 800
++ nicht existent: SubFkt2....irgendwas, aber SubFkt3SubFkt2bPtr und SubFkt3SubFkt2b
++ giveSetOfPolyTypes: verwendet auch diese Fkt für die Polygonzeichnung
+**** verkleinerte Funktion war:
++ disEnAbleChks
+  Daraus hatte den viel Code entnommen in neue Funktionen
+  verweist auf:
+  + SubFkt3
+  + SubFkt1_PolyTypes
+    verwendet:
+    + SubFkt3SubFkt1Ptr, SubFkt3SubFkt2Ptr
+**** Ablauf
++ disEnAbleChks
++ subFkt1_PolyTpes: macht diese lange liste einfacher befehle, die ich später algorithmisch zusammenfassen könnte, aber alle Varianten der Codeverbeserung sind MistsubFkt3
++ subFkt3:
+  führt die beiden Fkt in einer Schleife mit if else getrennt aus: diese waren funktionszeiger nun als Variable und damit als Funktion
++ Also zusammenfassend: Fkt1 dann Fkt3 darin Fkt3_1 Fkt3_2
+***** Was macht dieser Code?
++ Fkt1: erschafft vars: Enums, Enume, abzug
+  + nimmt: Nummernliste
+  + aus kleinen zahlen mach neue zahlenliste durch kompliziertes
+    + Zahlen 0 bis 6
++ Fkt3: erschafft nummern Menge
+**** Überprüfung
++ subFkt1_PolyTpes scheint nicht das wirkliche Problem zu sein
+**** bla
++ giveSetOfPolyTypes
++ gleichförmiges: 1
++ Stern: 0
+*** neuer Tag
+**** TODO
++ am Ende vollständig refactored
++ Bugfei
++ Die Zahlenkurzbefehlreihen algorithmisiert mit Erklärungstext als Kommentar
++ mehrmals alles noch mal überblicken, damit es lückenlos okay genug ist alles
+** MariaDB Replikations-Cluster :mysql:mariadb:forum:@rX:
+:PROPERTIES:
+:Export_DATE: [2023-07-22T07:27+02:00]
+:CLOSED: [2023-07-22T07:27+02:00]
+:EXPORT_FILE_NAME: 16mariadb
+:EXPORT_HUGO_WEIGHT: -16
+:draft:    false
+:END:
+*** 1
++    Voraussetzungen überprüfen: Stellen Sie sicher, dass Sie mehrere Server bereit haben, die als Master- und Slave-Server fungieren sollen. Diese Server sollten eine ähnliche oder identische Version von MariaDB ausführen und über ein zuverlässiges Netzwerk miteinander verbunden sein.
+
++    my.cnf-Konfiguration anpassen: Bearbeiten Sie die Konfigurationsdatei my.cnf auf jedem Server. Für die Master-Server sollten Sie die binäre Protokollierung aktivieren und die Parameter für die Replikation festlegen. Für die Slave-Server müssen Sie die Verbindungsinformationen zum Master angeben und die Server als Slave konfigurieren.
+
++    Datenbank-Backups erstellen: Bevor Sie mit der Replikation beginnen, erstellen Sie auf jedem Server einen vollständigen Datenbank-Backup. Dies dient als Sicherung und ermöglicht es Ihnen, im Falle von Problemen leicht auf einen vorherigen Zustand zurückzukehren.
+
++    Master-Server konfigurieren: Wählen Sie einen der Server als Master aus und aktivieren Sie das binäre Logging. Setzen Sie die entsprechenden Parameter in der my.cnf und starten Sie den Server neu, um die Änderungen zu übernehmen.
+
++    Slave-Server konfigurieren: Für jeden Slave-Server müssen Sie die Verbindung zum Master-Server konfigurieren und die Replikation starten. Dazu müssen Sie die Replikations-Parameter in der my.cnf angeben und den Slave-Server starten.
+
++    Replikation starten: Sobald die Konfiguration abgeschlossen ist, starten Sie die Replikation auf jedem Slave-Server. Überprüfen Sie die Replikationsstatus, um sicherzustellen, dass die Slave-Server erfolgreich mit dem Master verbunden sind und Daten replizieren.
+
+    Testen und Überwachen: Führen Sie umfangreiche Tests durch, um sicherzustellen, dass die Datenbanken ordnungsgemäß funktionieren und die Replikation wie erwartet abläuft. Überwachen Sie regelmäßig den Replikationsstatus, um Probleme frühzeitig zu erkennen.
+*** 2
+Die Einrichtung eines Replikations-Clusters in MariaDB erfolgt hauptsächlich durch Anpassungen in den Konfigurationsdateien der Server. Hier sind die genauen Schritte, wie Sie das in den Konfigurationsdateien my.cnf oder my.ini machen können:
+
+**** Schritt 1: Master-Server konfigurieren
+
+Öffnen Sie die Konfigurationsdatei my.cnf oder my.ini des Master-Servers. Diese Datei befindet sich normalerweise im Verzeichnis /etc/mysql/ auf Linux-Systemen oder C:\ProgramData\MySQL\MySQL Server X.X\ auf Windows-Systemen.
+
+Fügen Sie die folgenden Zeilen in die [mysqld]-Sektion der Konfigurationsdatei ein, um das binäre Logging zu aktivieren und die Replikation vorzubereiten:
+
+ini
+
+[mysqld]
+server-id=1                    # Setzen Sie eine eindeutige ID für den Master-Server
+log-bin=master-binlog          # Aktivieren Sie das binäre Logging
+binlog-format=row              # Wählen Sie das Replikationsformat (row-based Replikation wird empfohlen)
+
+Speichern Sie die Änderungen und starten Sie den Master-Server neu, damit die Konfiguration wirksam wird.
+
+**** Schritt 2: Slave-Server konfigurieren
+
+Öffnen Sie die Konfigurationsdatei my.cnf oder my.ini des ersten Slave-Servers.
+
+Fügen Sie die folgenden Zeilen in die [mysqld]-Sektion der Konfigurationsdatei ein, um die Verbindung zum Master herzustellen und die Replikation zu konfigurieren:
+
+ini
+
+[mysqld]
+server-id=2                    # Setzen Sie eine eindeutige ID für den Slave-Server
+replicate-do-db=my_database    # Optional: Geben Sie an, welche Datenbanken repliziert werden sollen (ersetzen Sie 'my_database' durch den Datenbanknamen)
+master-host=master_ip_address  # Setzen Sie die IP-Adresse oder den Hostnamen des Master-Servers
+master-user=replication_user   # Setzen Sie den Benutzernamen für die Replikation (vorher auf dem Master-Server erstellen)
+master-password=your_password  # Setzen Sie das Passwort für die Replikation
+
+Speichern Sie die Änderungen und starten Sie den Slave-Server neu.
+
+**** Schritt 3: Replikation starten
+
+Nachdem Sie die Konfiguration auf dem Slave-Server vorgenommen haben, können Sie die Replikation starten.
+
+    Öffnen Sie eine MySQL-Client-Shell auf dem Slave-Server.
+    Geben Sie den folgenden Befehl ein, um die Replikation zu starten:
+
+sql
+
+START SLAVE;
+
+    Überprüfen Sie den Replikationsstatus:
+
+sql
+
+SHOW SLAVE STATUS;
+
+Stellen Sie sicher, dass die Werte von "Slave_IO_Running" und "Slave_SQL_Running" auf "Yes" stehen und dass es keine Fehlermeldungen gibt.
+
+**** Schritt 4: Weitere Slave-Server hinzufügen
+
+Sie können weitere Slave-Server hinzufügen, indem Sie die Schritte 2 und 3 für jeden zusätzlichen Server wiederholen.
+
+Bitte beachten Sie, dass diese Schritte eine grundlegende Konfiguration darstellen und je nach Ihren spezifischen Anforderungen weitere Einstellungen erforderlich sein können. Es wird empfohlen, die offizielle MariaDB-Dokumentation zu Rate zu ziehen und gegebenenfalls einen erfahrenen Datenbankadministrator zu Rate zu ziehen, um sicherzustellen, dass die Replikation ordnungsgemäß eingerichtet wird.
+**** was passiert, wenn ein master oder slave ausfällt
+bei Galera sind alle Master also kein Problem.
+bei Master Slave gibt es bei Master-Ausfall keinen Schreibzugriff
+*** was bedeutet das, dass einer master ist und der andere slave
+Die Slave-Server sind schreibgeschützt und dienen hauptsächlich zum Lesen von Daten.
+*** erkläre mir, wie ich galera cluster mit master slave kombinieren kann
+Es ist nicht sinnvoll, Galera Cluster und Master-Slave-Replikation direkt miteinander zu kombinieren, da sie unterschiedliche Ansätze zur Datenreplikation darstellen und im Wesentlichen das gleiche Ziel haben:
+1. Galera Cluster mit Master-Slave für Disaster Recovery:
+Sie könnten ein Galera Cluster für Ihre primäre Datenbankumgebung verwenden, um hohe Verfügbarkeit und sofortige Konsistenz zu gewährleisten. Gleichzeitig könnten Sie Master-Slave-Replikation für Disaster-Recovery-Zwecke einrichten, um eine asynchrone Kopie Ihrer Daten auf einem entfernten Standort zu haben. Wenn das Galera Cluster ausfällt oder unerwartete Probleme auftreten, können Sie auf die Slave-Datenbank zurückgreifen und diese zur Wiederherstellung verwenden.
+
+2. Master-Slave-Replikation mit Galera für geografische Verteilung:
+Wenn Sie Datenbanken in verschiedenen geografischen Standorten benötigen, könnten Sie eine Master-Slave-Replikation zwischen einem zentralen Master und entfernten Slave-Servern einrichten. Gleichzeitig könnten Sie ein Galera Cluster für eine separate Datenbankumgebung in einem anderen geografischen Standort verwenden. Dies würde es Ihnen ermöglichen, lokale Datenbanken mit asynchroner Replikation zu betreiben und gleichzeitig eine hochverfügbare, synchrone Replikation für eine andere Datenbank bereitzustellen.
+
+3. Galera Cluster mit Master-Slave für spezifische Anwendungen:
+In einigen Szenarien könnten Sie eine spezielle Anwendung haben, die eine spezielle Art der Replikation erfordert, die von Galera Cluster nicht unterstützt wird. In diesem Fall könnten Sie eine Master-Slave-Replikation für diese spezifische Anwendung einrichten, während Sie gleichzeitig andere Anwendungen mit Galera Cluster betreiben.
+*** welche nachteile hat galera im vergleich zu master slave
++ 2. Synchrones Replikationsprotokoll:
+Galera Cluster verwendet eine synchrone Replikation, bei der Schreibzugriffe auf alle Knoten im Cluster repliziert werden müssen, bevor sie als erfolgreich abgeschlossen gelten. Dies kann zu Latenzproblemen führen, insbesondere wenn die Knoten in verschiedenen geografischen Standorten verteilt sind. Im Gegensatz dazu ist die Master-Slave-Replikation asynchron, sodass Schreibzugriffe auf den Master sofort abgeschlossen werden können, während die Replikation der Änderungen an die Slave-Knoten asynchron erfolgt.
++ 3 und 5. Konfliktbehandlung kann nötig werden
+*** welche versionsnummernteile von mariadb müssen für galera übereinstimmen
+Für eine erfolgreiche Verwendung von Galera Cluster mit MariaDB müssen die Hauptversionsnummer und die Nebenversion (Minor-Version) von MariaDB zwischen den Clusterknoten übereinstimmen.
+*** Kann ich Master Slave mit Galera so kombinieren, dass nach einem Ausfall eines Knotens die Masteer Slave konfiguration definiert, wie bei wiederverbindung des knotens neu synchronisiert werden soll?
+Ja, Sie können Master-Slave-Replikation und Galera Cluster kombinieren, um eine zusätzliche Schicht der Ausfallsicherheit und Datenreplikation zu erreichen. Wenn ein Knoten in einem solchen Setup ausfällt und später wieder mit dem Cluster verbunden wird, kann die Master-Slave-Konfiguration definieren, wie die Neu-Synchronisation des wiederverbundenen Knotens stattfinden soll.
+
+Hier ist eine mögliche Vorgehensweise, wie Sie das kombinierte Setup nutzen könnten:
+
++    Galera Cluster mit Master-Slave-Replikation einrichten: Sie könnten zunächst einen Galera Cluster aufbauen, um die Vorteile der synchrone Replikation und hohen Verfügbarkeit zu nutzen. Alle Knoten im Cluster sind gleichwertige "Multi-Master" und können sowohl Lese- als auch Schreibzugriffe unterstützen.
+
++    Master-Slave-Replikation für Disaster Recovery: Für zusätzliche Redundanz könnten Sie zusätzlich eine Master-Slave-Replikation zwischen dem Haupt-Galera-Master (oder einem anderen bevorzugten Knoten) und einem entfernten Slave-Server einrichten. Dieser Slave-Server fungiert als asynchrone Kopie und bietet eine Sicherung der Daten für den Fall eines vollständigen Ausfalls des gesamten Galera Clusters.
+
++    Ausfall eines Knotens: Wenn ein Knoten im Galera Cluster ausfällt, können die anderen Knoten weiterhin Schreib- und Lesezugriffe bedienen. Der ausgefallene Knoten wird später, wenn er wieder mit dem Cluster verbunden ist, die Daten neu synchronisieren, um auf den aktuellen Stand zu kommen.
+
++    Wiederverbindung des ausgefallenen Knotens: Nachdem der ausgefallene Knoten wiederhergestellt wurde und sich mit dem Cluster verbunden hat, könnte die Master-Slave-Replikation dafür sorgen, dass der wiederverbundene Knoten seine Daten vom Haupt-Galera-Master oder dem anderen bevorzugten Knoten repliziert, um die Datenkonsistenz wiederherzustellen.
+**** damit ließe sich also einrichten, dass Konfliktfälle automatisch statt manuell behandelt werden?
+Ja, durch die Kombination von Galera Cluster mit Master-Slave-Replikation können Konfliktfälle in gewissem Maße automatisch behandelt werden. Die Konflikte werden jedoch immer noch in Abhängigkeit von den gewählten Replikationsmechanismen und den spezifischen Einstellungen manuell oder automatisch gelöst.
+
+Hier ist, wie es funktionieren könnte:
+
++    Galera Cluster für synchronen Datenabgleich: Galera Cluster verwendet eine synchrone Replikation, bei der alle Knoten als aktive Master fungieren und Datenänderungen sofort auf alle Knoten repliziert werden. Wenn Konflikte auftreten, zum Beispiel wenn zwei oder mehr Knoten gleichzeitig Schreibzugriffe auf denselben Datensatz ausführen, tritt der sogenannte "Write-Conflict" auf. Galera hat einen integrierten Mechanismus, um mit Write-Conflicts umzugehen und sie automatisch zu lösen, indem die betroffenen Knoten die Konflikte erkennen und die betroffenen Transaktionen automatisch zurücksetzen. Es ist jedoch wichtig, dass Anwendungen so entwickelt sind, dass sie mit Write-Conflicts umgehen können und bei Bedarf die Transaktionen wiederholen.
+
++    Master-Slave-Replikation für Disaster Recovery: Die Master-Slave-Replikation kann als zusätzliche Sicherheitsebene dienen und als asynchrone Kopie der Daten dienen, die auf einem entfernten Slave-Server liegt. Im Falle eines Ausfalls des Galera Clusters könnten Sie auf die Daten des Slave-Servers zurückgreifen, um die Verfügbarkeit zu gewährleisten und Datenverlust zu minimieren. Die Konfliktbehandlung in der Master-Slave-Replikation ist in der Regel manueller Natur, da sie asynchron ist und die Replikation mit einer gewissen Verzögerung erfolgt. In Konfliktfällen, die während der asynchronen Replikation auftreten können, müssten Sie möglicherweise manuell eingreifen, um die Konflikte zu identifizieren und zu lösen.
+*** wie muss ich dafür die konfigurationsdateien einstellen, um Galera und Master Slave zu haben
+**** Schritt 1: Galera Cluster konfigurieren
+
+    Stellen Sie sicher, dass die Hauptversionsnummer und die Nebenversion von MariaDB auf allen Knoten im Galera Cluster übereinstimmen.
+
+    Öffnen Sie die Konfigurationsdatei my.cnf oder my.ini auf jedem Knoten und fügen Sie die folgenden Konfigurationsoptionen unter der [mysqld]-Sektion ein:
+
+ini
+
+[mysqld]
+wsrep_on=ON                    # Aktiviert den Galera Cluster-Modus
+wsrep_cluster_address="gcomm://node1_ip,node2_ip,node3_ip"  # Die IP-Adressen aller Knoten im Cluster
+wsrep_provider=/path/to/galera.so  # Pfad zur Galera-Bibliothek (abhängig von Ihrer Installation)
+wsrep_node_address="current_node_ip"  # IP-Adresse des aktuellen Knotens
+wsrep_node_name="node_name"   # Eindeutiger Name für den aktuellen Knoten
+wsrep_sst_method=rsync        # Wählen Sie eine Methode für den State Snapshot Transfer (SST)
+
+    Starten Sie die MariaDB-Dienste auf allen Knoten im Cluster neu, um die neuen Konfigurationseinstellungen wirksam zu machen.
+
+**** Schritt 2: Master-Slave-Replikation konfigurieren
+
+    Wählen Sie einen bevorzugten Knoten im Galera Cluster, der als Master für die Master-Slave-Replikation dienen soll.
+
+    Öffnen Sie die Konfigurationsdatei my.cnf oder my.ini auf dem gewählten Master-Knoten und fügen Sie die folgenden Konfigurationsoptionen unter der [mysqld]-Sektion ein:
+
+ini
+
+[mysqld]
+server-id=1                  # Eindeutige ID für den Master-Knoten (jeweils unterschiedliche IDs für Slave-Knoten)
+log-bin=master-binlog        # Aktiviert das binäre Logging
+binlog_format=row            # Wählen Sie das Replikationsformat (row-based Replikation wird empfohlen)
+
+    Starten Sie die MariaDB auf dem Master-Knoten neu, damit die neuen Konfigurationseinstellungen wirksam werden.
+
+    Konfigurieren Sie die Slave-Knoten für die Master-Slave-Replikation. Öffnen Sie die Konfigurationsdatei my.cnf oder my.ini auf jedem Slave-Knoten und fügen Sie die folgenden Konfigurationsoptionen unter der [mysqld]-Sektion ein:
+
+ini
+
+[mysqld]
+server-id=2                  # Eindeutige ID für den ersten Slave-Knoten
+replicate-do-db=my_database  # Optional: Geben Sie an, welche Datenbanken repliziert werden sollen
+master-host=master_ip_address  # IP-Adresse oder Hostname des Master-Knotens
+master-user=replication_user   # Benutzername für die Replikation (vorher auf dem Master-Knoten erstellen)
+master-password=your_password  # Passwort für die Replikation
+
+    Starten Sie die MariaDB-Dienste auf den Slave-Knoten neu.
+
+**** Schritt 3: Replikation starten
+
+    Gehen Sie sicher, dass der Galera Cluster ordnungsgemäß funktioniert und alle Knoten verbunden sind.
+
+    Stellen Sie sicher, dass die Master-Slave-Replikation ordnungsgemäß eingerichtet ist, indem Sie auf dem Master den Befehl SHOW MASTER STATUS; ausführen, um die aktuelle Position im binären Protokoll zu sehen, und auf den Slaves den Befehl SHOW SLAVE STATUS; ausführen, um den Replikationsstatus zu überprüfen.
+
+    Um die Replikation auf den Slave-Knoten zu starten, führen Sie auf jedem Slave den Befehl START SLAVE; aus.
+
+    Überprüfen Sie den Replikationsstatus auf den Slave-Knoten, um sicherzustellen, dass die Replikation läuft und es keine Fehler gibt.
+**** Ist das wirklich alles?
+Meine Entschuldigung für die Unvollständigkeit in meiner vorherigen Antwort. Tatsächlich ist die Konfiguration einer kombinierten Lösung von Galera Cluster und Master-Slave-Replikation etwas umfangreicher als das, was ich zuvor beschrieben habe. Hier sind die zusätzlichen Schritte und Informationen, die für eine vollständige Konfiguration benötigt werden:
+
+***** Schritt 1: Galera Cluster konfigurieren
+
+    Sicherstellen, dass die Firewall-Einstellungen auf allen Knoten so konfiguriert sind, dass die erforderlichen Netzwerkports für die Kommunikation zwischen den Galera-Knoten geöffnet sind. Die Standardports sind 3306 (MySQL) und 4567-4568 (Galera Kommunikation).
+
+    Konfiguration der SST-Methode (State Snapshot Transfer). Galera verwendet den SST-Mechanismus, um den Inhalt einer Datenbank von einem existierenden Knoten zu einem neu hinzugefügten oder wieder verbundenen Knoten zu übertragen. In der Konfigurationsdatei können Sie die SST-Methode festlegen, die am besten zu Ihrer Umgebung passt. Es gibt verschiedene SST-Methoden wie "rsync", "xtrabackup", "mysqldump" usw. Die Auswahl der SST-Methode hängt von der Größe Ihrer Datenbank und der Verfügbarkeit der entsprechenden Tools auf den Knoten ab.
+
+    Sorgen Sie dafür, dass die gleichen Galera-Einstellungen (wsrep_on, wsrep_cluster_address, wsrep_node_address, wsrep_node_name usw.) auf allen Knoten im Cluster konfiguriert sind.
+
+***** Schritt 2: Master-Slave-Replikation konfigurieren
+
+    Für die Master-Slave-Replikation müssen Sie die Replikationseinstellungen auf allen Slave-Knoten richtig konfigurieren. Die Einstellungen server-id, replicate-do-db, master-host, master-user, master-password usw. sind für jeden Slave-Knoten anzupassen.
+
+    Erstellen Sie einen Replikationsbenutzer auf dem Master-Knoten mit den erforderlichen Replikationsrechten. Zum Beispiel:
+
+sql
+
+CREATE USER 'repl_user'@'slave_ip' IDENTIFIED BY 'password';
+GRANT REPLICATION SLAVE ON *.* TO 'repl_user'@'slave_ip';
+
+***** Schritt 3: Replikation starten
+
+    Starten Sie die Galera Cluster-Knoten nacheinander, um sicherzustellen, dass sie sich erfolgreich verbinden und synchronisieren.
+
+    Starten Sie die Master-Slave-Replikation auf den Slave-Knoten mit dem Befehl START SLAVE;.
+
+    Überprüfen Sie den Replikationsstatus auf den Slave-Knoten, um sicherzustellen, dass die Replikation läuft und es keine Fehler gibt.
+
+    Überwachen Sie regelmäßig die Replikationsstatus auf allen Knoten, um Probleme oder Konflikte frühzeitig zu erkennen und zu beheben.
+*** Kann man auf einer Maschine 2 MariaDB instanzen verwenden mit 2 völlig verschiedenen konfigurationen oder gibt es dafür einschränkungen?
+ChatGPT
+
+Ja, es ist möglich, auf einer Maschine zwei MariaDB-Instanzen mit völlig unterschiedlichen Konfigurationen zu verwenden. MariaDB unterstützt das Konzept mehrerer Instanzen auf demselben Server, und Sie können separate Konfigurationsdateien für jede Instanz erstellen, um sie unabhängig voneinander zu verwalten.
+
+Hier sind die grundlegenden Schritte, um zwei separate MariaDB-Instanzen auf derselben Maschine einzurichten:
+
+****    Installieren Sie MariaDB: Stellen Sie sicher, dass Sie MariaDB auf Ihrem System installiert haben. Wenn Sie es noch nicht getan haben, können Sie die Installationsanweisungen für Ihre spezifische Betriebssystemversion befolgen.
+
+****    Erstellen Sie separate Datenverzeichnisse: Für jede Instanz müssen Sie separate Datenverzeichnisse erstellen, damit die Datenbanken getrennt gespeichert werden. Stellen Sie sicher, dass die Berechtigungen für die Verzeichnisse richtig gesetzt sind.
+
+****    Erstellen Sie separate Konfigurationsdateien: Erstellen Sie für jede Instanz eine separate Konfigurationsdatei (normalerweise "my.cnf" oder "my.ini", je nach Betriebssystem). In jeder Konfigurationsdatei können Sie die spezifischen Einstellungen für die jeweilige Instanz festlegen, einschließlich Portnummern, Datenverzeichnissen, Benutzernamen, Passwörtern und anderen Konfigurationsoptionen.
+
+****    Starten Sie die Instanzen: Sie können die Instanzen unabhängig voneinander starten und stoppen, indem Sie die entsprechenden Befehle für die jeweilige Instanz verwenden. Zum Beispiel:
+        Um die erste Instanz zu starten: mysqld_safe --defaults-file=/pfad/zur/ersten/konfigurationsdatei
+        Um die zweite Instanz zu starten: mysqld_safe --defaults-file=/pfad/zur/zweiten/konfigurationsdatei
+** Was könnte ich programmieren :reta:
+:PROPERTIES:
+:Export_DATE: [2023-08-06T11:27+02:00]
+:CLOSED: [2023-08-06T11:27+02:00]
+:EXPORT_FILE_NAME: 17gedanken
+:EXPORT_HUGO_WEIGHT: -17
+:draft:    false
+:END:
+*** Was könnte ich programmieren
+| Programmier-Idee                        | Wertung |   | Priorität | Spaß |
+|-----------------------------------------+---------+---+-----------+------|
+| alternative Farbschemen alle rX         | ++      |   | -         | ++   |
+| in reta 2D Zeilenangaben, aber wie      | +       |   | +         |      |
+| Formeln statt nur Genertoren als Zeilen | -       |   | -         | ++   |
+| html multilingual                       | +       |   | +         | -    |
+*** Wie
+**** alternative Farbschemen
++ 2 und 3
++ 4 Primzahltypen
++ Ob Halbsonne, wie 12 und 18
+**** 2D Zeilenangaben
++ Wie in der html in der cli
+**** multilingual
++ vielleicht besser auf eine lib verzichten und alles in einem record lagern.

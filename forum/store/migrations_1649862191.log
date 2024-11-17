@@ -1,0 +1,320 @@
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_profilefield_aol.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\remove_profilefield_aol.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\remove_profilefield_aol; Time: 0.02 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_profilefield_aol.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\remove_profilefield_aol.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\remove_profilefield_aol; Time: 0.01 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332rc1.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v332rc1.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v332rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332rc1.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v332rc1.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v332rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v32x\v3211.
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v32x\v3211
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v332.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v332; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v332.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v332.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v332; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333rc1.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v333rc1.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v333rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333rc1.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v333rc1.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v333rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v333.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v333; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v333.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v333.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v333; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v334rc1.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v334rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334rc1.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v334rc1.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v334rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v334.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v334; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v334.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v334.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v334; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\extend_bbcode_tooltip.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\extend_bbcode_tooltip.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\extend_bbcode_tooltip; Time: 0.03 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\extend_bbcode_tooltip.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\extend_bbcode_tooltip.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\extend_bbcode_tooltip; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\bot_update_v2.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\bot_update_v2.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\bot_update_v2; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\bot_update_v2.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\bot_update_v2.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\bot_update_v2; Time: 0.32 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\jquery_update_v2.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\jquery_update_v2.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\jquery_update_v2; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\jquery_update_v2.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\jquery_update_v2.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\jquery_update_v2; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335rc1.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v335rc1.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v335rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335rc1.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v335rc1.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v335rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v335.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v335; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v335.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v335.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v335; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\remove_orphaned_roles; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\remove_orphaned_roles.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\remove_orphaned_roles; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v336rc1.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v336rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336rc1.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v336rc1.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v336rc1; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v336rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\fix_display_unapproved_posts_config
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v332
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v331rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v335
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v335rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v331
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\google_recaptcha_v3
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\extend_bbcode_tooltip
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update_v2
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v332rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\remove_profilefield_aol
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\jquery_update_v2
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v333
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v336.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v336; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v336rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\fix_display_unapproved_posts_config
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v332
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v331rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v335
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v335rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v331
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\google_recaptcha_v3
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\extend_bbcode_tooltip
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update_v2
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v332rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\remove_profilefield_aol
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\jquery_update_v2
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v333
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v336.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v336.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v336; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v336rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\fix_display_unapproved_posts_config
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v332
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v331rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v335
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v335rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v331
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\google_recaptcha_v3
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\extend_bbcode_tooltip
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update_v2
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v332rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\remove_profilefield_aol
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\jquery_update_v2
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v333
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v336
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\default_search_return_chars
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\profilefield_cleanup
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_update
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\add_notification_emails_table
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v337.
+[DEBUG] Installing Schema: \phpbb\db\migration\data\v33x\v337.
+[INFO] Installed Schema: \phpbb\db\migration\data\v33x\v337; Time: 0.00 seconds
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_rollback
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v336rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\fix_display_unapproved_posts_config
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v332
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v331rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v334rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v335
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v335rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v331
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\google_recaptcha_v3
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\extend_bbcode_tooltip
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\bot_update_v2
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v332rc1
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\remove_profilefield_aol
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\jquery_update_v2
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v333
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\v336
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\default_search_return_chars
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\profilefield_cleanup
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\font_awesome_5_update
+[DEBUG] Migration already effectively installed (skipped): \phpbb\db\migration\data\v33x\add_notification_emails_table
+[DEBUG] Apply dependencies of \phpbb\db\migration\data\v33x\v337.
+[DEBUG] Installing Data: \phpbb\db\migration\data\v33x\v337.
+[INFO] Installed Data: \phpbb\db\migration\data\v33x\v337; Time: 0.00 seconds

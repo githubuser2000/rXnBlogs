@@ -1,0 +1,4 @@
+<?php exit; ?>
+1639487434
+804
+a:3:{s:32:"b976b25780d7ac5a1c29f0f49c946064";a:1:{i:0;a:4:{s:10:"named_path";s:53:"ext/phpbb/viglink/language/en_us/info_acp_viglink.php";s:8:"ext_name";s:13:"phpbb/viglink";s:4:"path";s:33:"ext/phpbb/viglink/language/en_us/";s:8:"filename";s:20:"info_acp_viglink.php";}}s:32:"d88240bd23e71f65ecafa20db33b5040";a:1:{i:0;a:4:{s:10:"named_path";s:50:"ext/phpbb/viglink/language/en/info_acp_viglink.php";s:8:"ext_name";s:13:"phpbb/viglink";s:4:"path";s:30:"ext/phpbb/viglink/language/en/";s:8:"filename";s:20:"info_acp_viglink.php";}}s:32:"d62888d725da1004d328fc26f8bc58f5";a:1:{i:0;a:4:{s:10:"named_path";s:56:"ext/phpbb/viglink/language/de_x_sie/info_acp_viglink.php";s:8:"ext_name";s:13:"phpbb/viglink";s:4:"path";s:36:"ext/phpbb/viglink/language/de_x_sie/";s:8:"filename";s:20:"info_acp_viglink.php";}}}
